@@ -90,3 +90,138 @@
             . themes/
             . abstracts/
             . vendors/
+
+
+--------------------------------------------------------------
+4. Introduction to Sass and NPM
+--------------------------------------------------------------
+ you can use // for comment in sass
+ sass and scss are same but scss use {} and sass use indent;
+
+3:
+
+    define variables:
+        $color-primary:#333;
+        $color-secondary:..;
+        $color-tertiary:...;
+        $color-text-dark:...;
+        $width-button 150px
+
+    & operator
+
+    .btn-main{
+        &:link{}
+        &:hover{}
+
+    }
+
+    darken -- lighten
+    background-color:darken($color-secondary, 15%)
+    background-color:($color-secondary, 15%)
+
+
+4:
+    mixin -- include -- reusable
+    piece of code  -- pass argument to mixin
+    function return *
+    extend placeholder %
+
+    mixin:
+        @mixin style-link-text($col){
+            text-decoration:none;
+            text-transform: uppercase;
+            color:$col;
+        }
+
+    use:
+
+        a{
+
+            @include style-link-text($color-primary)
+
+        }
+
+    function:
+
+        @function divided($a, $b){
+            @return $a / $b
+        }
+
+
+        use:
+
+        nav{
+            margin:divided(60,2) * 1px; //30px
+        }
+
+
+    %btn-placeholder{
+        1...
+        2...
+        3...
+        ...
+    }
+
+    .btn-main{
+        &:link{
+        @extend %btn-placeholder
+
+        }
+    }
+
+     .btn-hot{
+        &:link{
+        @extend %btn-placeholder
+
+        }
+    }
+
+
+    it different with mixin in css export
+
+    .btn-main:link,
+    .btn-hot:link{
+        1...
+        2...
+        3...
+        4...
+
+    }
+
+    but in mixin the code copied in each section separately;
+
+5: Command line
+6: npm:
+
+    npm init
+    npm install node-sass --save-dev
+
+
+7:
+    config sass
+
+    package.json:
+
+        "scripts":{
+            "compile:sass":"node-sass sass/main.scss css/style.css -w"
+
+        }
+
+    add -w flag to watch changes as soon as possible
+
+
+    npm run compile:sass
+
+
+
+--------------------------------------------------------------
+5. Natours Project — Using Advanced CSS and Sass (Part 2)
+--------------------------------------------------------------
+
+
+
+
+
+
+
+
