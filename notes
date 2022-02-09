@@ -13,9 +13,80 @@
         transform:translate(-50%,-50%)
 
 
-5 - Animation keyfram
-
-    // TODO --> write all propery name
+5 - Animation keyframe
 
 
+
+    @keyframe moveToRight{
+        0%{
+        }
+        80%{
+        }
+        100{
+        }
+
+    }
+
+    .btn{
+        animation-name: moveToRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        or:
+        animation: moveToRight 1s ease-out (10s);
+    }
+  /*to avoid vibrate or flutter (at the end of animation motion it have a bit jump*/
+
+    animation-fill-mode:backwards;
 6
+
+
+--------------------------------------------------------------
+3. How CSS Works A Look Behind the Scenes
+--------------------------------------------------------------
+
+
+4:
+    priority in css
+
+    (inline, id, class, tagName)
+
+
+5:
+
+6: rem em vh wh
+
+7:  Inheritence in css
+
+8:
+    html:
+        62.5 % ==> 10px = 1rem
+
+    *,
+    *::after,
+    *::before{
+    box-sizing: inherit;
+    }
+    body{
+        box-sizing: border-box;
+    }
+
+10:
+    BEM:
+        block element modifier
+
+        .block{}
+        .block__element{}
+        .bolock__element--modifier{}
+
+    the 7-1 pattern:
+        7 different folder for partial Sass files, and 1 main Sass file to import all other files into a compile CSS stylesheet
+
+
+        The 7 folders:
+            . base/
+            . components/
+            . layout/
+            . pages/
+            . themes/
+            . abstracts/
+            . vendors/
