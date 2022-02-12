@@ -221,6 +221,43 @@
 
 5:
 
+    clear fix:
+
+    write it in _mixins.scss:
+
+    @mixin clearfix{
+        content:'';
+        display:tabel;
+        clear:both;
+    }
+
+    not -- last-child
+
+    &:not(:last-child){
+        ...
+    }
+
+
+    calc -- #
+
+    use `#{$variables}` if you want use variables in `calc`
+
+    width: calc(100% - #{${variables});
+
+
+
+    ^ -- *
+
+    select attribute with ^ or *
+
+    use ^ -->> for started with specific word
+    use * -->> for content a specific word
+
+    [class^='col-]
+    or
+    [alt*='color']
+
+
 
 
 
