@@ -58,6 +58,7 @@ body {
 .heading-secondary {
   font-size: 3.5rem;
   font-weight: 700;
+  text-transform: uppercase;
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   -webkit-background-clip: text;
   color: transparent;
@@ -66,6 +67,39 @@ body {
 }
 .heading-secondary:hover {
   transform: skewY(-0.5deg);
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}
+.paragraph:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  text-decoration: none;
+  display: inline-block;
+  color: #55c57a;
+  border-bottom: 1px solid #55c57a;
+  transition: all 0.2s;
+}
+.btn-text:hover {
+  color: #fff;
+  background-color: #55c57a;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  padding: 3px;
+}
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(0px);
 }
 
 /*animations  */
@@ -119,8 +153,16 @@ body {
   text-align: center;
 }
 
-.u-margin-8 {
+.u-margin-big {
   margin-bottom: 8rem;
+}
+
+.u-margin-medium {
+  margin-bottom: 4rem;
+}
+
+.u-margin-small {
+  margin-bottom: 1.5rem;
 }
 
 .header {
@@ -153,7 +195,6 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto;
-  text-align: center;
 }
 .row::after {
   content: "";
@@ -232,6 +273,39 @@ body {
 .btn--animated {
   animation: moveInButton 0.5s ease-out;
   animation-fill-mode: backwards;
+}
+
+.composition {
+  position: relative;
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.9);
+}
+.composition__photo {
+  width: 55%;
+  position: absolute;
+  outline-offset: 2rem;
+  transition: all 0.3s;
+  z-index: 10;
+  box-shadow: 0 1.5rem 4.5rem rgba(0, 0, 0, 0.4);
+}
+.composition__photo--p1 {
+  top: -2rem;
+  left: 0;
+}
+.composition__photo--p2 {
+  top: 2rem;
+  right: 0;
+}
+.composition__photo--p3 {
+  top: 10rem;
+  left: 20%;
+}
+.composition__photo:hover {
+  outline: 1.5rem solid #55c57a;
+  transform: scale(1.05) translateY(-0.5rem);
+  z-index: 20;
+  box-shadow: 0 2.5rem 4.5rem rgba(0, 0, 0, 0.5);
 }
 
 .section-about {

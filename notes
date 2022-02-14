@@ -258,6 +258,35 @@
     [alt*='color']
 
 
+6: use linear gradient for text (web kit background clip)
+
+    // Step1
+    background-image: linear(to right, red, blue)
+
+    // step2 --> background clip except somewhere we have text
+    -webkit-background-clip:text;
+
+    //step3 transparent color of text
+    //so the you can see the color of background
+    color:transparent
+
+
+
+    skewX skewY
+
+    transform: skewX(2deg)
+
+
+7:
+
+8:
+
+
+
+
+
+
+
 
 
 

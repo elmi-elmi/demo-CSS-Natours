@@ -7,6 +7,7 @@ body {
   padding: 3rem;
   box-sizing: border-box;
 }
+
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
@@ -35,17 +36,58 @@ body {
   }
 }
 
-.heading-secondary{
+.heading-secondary {
   font-size: 3.5rem;
   font-weight: 700;
-  background-image: linear-gradient(to right,$color-primary-light, $color-primary-dark);
+  text-transform: uppercase;
+
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: .2rem;
   transition: all 0.5s;
 
-  &:hover{
-    transform: skewY(-0.5deg) ;
+  &:hover {
+    transform: skewY(-0.5deg);
   }
 
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem
+  }
+}
+
+.btn-text{
+
+  &:link,
+  &:visited{
+    font-size: $default-font-size;
+    text-decoration:none;
+    display: inline-block;
+    color: $color-primary;
+    border-bottom:1px solid $color-primary;
+    transition:all 0.2s;
+  }
+  &:hover{
+    color: $color-white;
+    background-color: $color-primary;
+    box-shadow: 0 1rem 2rem rgb($color-black,0.2);
+    transform:translateY(-2px);
+    padding:3px;
+
+  }
+  &:active{
+    box-shadow: 0 0.5rem 1rem rgb($color-black,0.2);
+    transform:translateY(0px);
+  }
 }
