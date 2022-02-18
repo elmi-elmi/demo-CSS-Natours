@@ -293,6 +293,22 @@
 
 10:
 
+    backface-visibility:hidden;
+
+    card front back
+
+    perspective: 100rem;
+    -moz-perspective: 100rem;
+11
+    background-blend-mode:screen;
+
+    box-decoration-break: clone;
+        --> every line is considered as a separate box  when line break and rest of text go to next line;
+
+
+12:
+
+
 
 
 
