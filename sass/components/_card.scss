@@ -18,7 +18,7 @@
     overflow:hidden;
 
 
-    box-shadow: 0 2rem 10rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
 
     &--front {
       position:absolute;
@@ -130,6 +130,30 @@
       }
 
     }
+  }
+
+
+  &--cta{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 80%;
+    text-align: center;
+
+  }
+  &--price-box{
+    margin-bottom: 10rem;
+  }
+  &--price-only{
+    font-size: 1.6rem;
+    color: $color-white;
+  }
+  &--price-value{
+    font-size: 6rem;
+    font-weight: 300;
+    color: $color-white;
+
   }
 
 }
