@@ -1,0 +1,23 @@
+.form {
+  &__group{
+      margin-bottom: 3rem;
+    }
+
+
+  &__input {
+    display:block;
+    width: 90%;
+    border:none;
+    padding:1.5rem;
+    border-radius: 2px;
+
+  }
+
+  &__label {
+  }
+
+  &__radio-group{
+    width: 30%;
+    display: inline-block;
+  }
+}
