@@ -310,6 +310,30 @@
 
 
 
+13:14:15
+//TODO shape
+
+video tag
+
+    <video>
+
+      <div class="bg-video">
+            <video  class="bg-video__content" autoplay loop muted>
+                <source src="./img/video.mp4" type="video/mp4">
+                <source src="./img/video.webm" type="video/webm">
+                Your browser is not supported.
+            </video>
+        </div>
+
+    video loopt autoplay muted type="video/mp4"
+
+
+
+    object-fit:cover // --> like backgroung-size:cover for images
+
+
+16
+ // TODO solid color gradient
 
 
 
