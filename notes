@@ -333,7 +333,24 @@ video tag
 
 
 16
- // TODO solid color gradient
+
+ linear-grdiant(105deg, white 0%, white 50%, red 50%, red 100%)
+
+ :placeholder-shown  --> show style when placeholder shown
+
+ ~ --> sibling selector
+ + --> next sibling selector (adjacent selector)
+
+ input sudo:
+
+    :focus
+    :focus:invalid
+
+
+ radio type:
+
+    :checked
+
 
 
 

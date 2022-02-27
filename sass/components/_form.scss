@@ -5,25 +5,46 @@
 
 
   &__input {
+    font-family: inherit;
+    color: $color-gray-dark;
+    background-color: rgba($color-white,0.8);
     display:block;
     width: 90%;
     border:none;
     padding:1.5rem;
     border-radius: 2px;
+    border-bottom: 3px solid $color-gray-light-1 ;
+    transition: all 0.3s;
+
 
     &:focus{
       outline:none;
       border-bottom: 3px solid $color-primary-dark ;
+      box-shadow: 0 1rem 3rem rgba($color-black,0.1);
     }
     &:focus:invalid{
       border-bottom: 3px solid $color-secondary-dark ;
-
     }
+
+    //&::-webkit-input-placeholder
 
   }
 
   &__label {
-    //font-size: 1.6rem;
+    font-family: inherit;
+
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition:all 0.3s;
+    padding-left: 1rem;
+
+  }
+
+  &__input:placeholder-shown ~ &__label{
+    opacity:0;
+    visibility: hidden;
+    transform:translateY(-2rem);
   }
 
   &__radio-group{
