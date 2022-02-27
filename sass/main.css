@@ -253,7 +253,7 @@ body {
     );
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   display: inline-block;
   position: relative;
   font-size: 1.6rem;
@@ -261,6 +261,7 @@ body {
   text-transform: uppercase;
   padding: 15px 4rem;
   border-radius: 10rem;
+  border: none;
   transition: all 0.2s;
 }
 .btn:hover {
@@ -552,7 +553,6 @@ body {
 }
 .form__input {
   font-family: inherit;
-  color: #777;
   background-color: rgba(255, 255, 255, 0.8);
   display: block;
   width: 90%;
@@ -569,6 +569,9 @@ body {
 }
 .form__input:focus:invalid {
   border-bottom: 3px solid #ff7730;
+}
+.form__input::-webkit-input-placeholder {
+  color: #777;
 }
 .form__label {
   font-family: inherit;

@@ -6,7 +6,6 @@
 
   &__input {
     font-family: inherit;
-    color: $color-gray-dark;
     background-color: rgba($color-white,0.8);
     display:block;
     width: 90%;
@@ -26,7 +25,10 @@
       border-bottom: 3px solid $color-secondary-dark ;
     }
 
-    //&::-webkit-input-placeholder
+    &::-webkit-input-placeholder{
+      color: $color-gray-dark;
+
+    }
 
   }
 
