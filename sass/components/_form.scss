@@ -46,7 +46,7 @@
   &__input:placeholder-shown ~ &__label{
     opacity:0;
     visibility: hidden;
-    transform:translateY(-2rem);
+    transform:translateY(-1rem);
   }
 
   &__radio-group{

@@ -46,9 +46,12 @@ body {
   color: transparent;
   letter-spacing: .2rem;
   transition: all 0.5s;
+  backface-visibility:hidden;
 
   &:hover {
-    transform: skewY(-0.5deg);
+    transform: skewY(-2deg);
+    backface-visibility:hidden;
+
   }
 
 }

@@ -345,6 +345,7 @@ video tag
 
     :focus
     :focus:invalid
+     &::-webkit-input-placeholder
 
 
  radio type:

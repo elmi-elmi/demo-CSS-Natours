@@ -64,9 +64,11 @@ body {
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all 0.5s;
+  backface-visibility: hidden;
 }
 .heading-secondary:hover {
-  transform: skewY(-0.5deg);
+  transform: skewY(-2deg);
+  backface-visibility: hidden;
 }
 
 .heading-tertiary {
@@ -584,7 +586,7 @@ body {
 .form__input:placeholder-shown ~ .form__label {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-2rem);
+  transform: translateY(-1rem);
 }
 .form__radio-group {
   width: 49%;
