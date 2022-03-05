@@ -630,6 +630,39 @@ body {
   opacity: 1;
 }
 
+.footer__logo-box {
+  margin-bottom: 5rem;
+}
+.footer__logo {
+  height: 10rem;
+  width: auto;
+}
+.footer__list {
+  display: inline-block;
+  list-style: none;
+  border-top: 2px solid #777;
+}
+.footer__item {
+  margin-top: 1rem;
+  float: left;
+}
+.footer__item:not(:last-child) {
+  margin-right: 2rem;
+}
+.footer__link {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #fff;
+}
+.footer__copyright {
+  border-top: 2px solid #777;
+}
+.footer__copyright p {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25vh 0;
@@ -673,6 +706,11 @@ body {
 .book__form {
   width: 50%;
   padding: 7rem;
+}
+
+.footer {
+  padding: 15rem 15rem;
+  background-color: #333;
 }
 
 /*# sourceMappingURL=main.css.map */
