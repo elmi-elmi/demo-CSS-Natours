@@ -1,49 +1,111 @@
-.footer{
-  &__logo-box{
+.footer {
+
+  &__logo-box {
     margin-bottom: 5rem;
   }
-  &__logo{
+
+  &__logo {
     height: 10rem;
     width: auto;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.3);
+      box-shadow: 0 2rem 4rem rgba($color-black, 0.5);
+      padding: 2rem;
+      border-radius: 1rem;
+    }
   }
-  &__navigation{
+
+  &__navigation {
+
   }
-  &__list{
+
+  &__list {
     display: inline-block;
     list-style: none;
     border-top: 2px solid $color-gray-dark;
+    transition: all .3s;
+    backface-visibility: hidden;
+
+    &:hover{
+      border-top: 2px solid $color-primary-dark;
+      transform: scale(0.98);
+
+    }
 
   }
-  &__item{
+
+  &__item {
 
 
     margin-top: 1rem;
     float: left;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-right: 2rem;
     }
 
 
-
   }
-  &__link{
+
+  &__link:link,
+  &__link:visited {
+    display: inline-block;
     font-size: 1.6rem;
-    text-decoration:none;
+    text-decoration: none;
     color: $color-white;
 
+    transition: all 0.3s;
+
+    &:hover,
+    &:active {
+      color: $color-primary-dark;
+      transform: scale(1.3) rotate(5deg);
+      box-shadow: 0 2rem 5rem rgba($color-black, 0.6);
+      border-radius: 1rem;
+    }
+
+
   }
-  &__copyright{
+
+  &__copyright {
     border-top: 2px solid $color-gray-dark;
+    transition:all 0.3s;
+    backface-visibility: hidden;
 
 
-    p{
+    &:hover{
+
+      border-top: 2px solid $color-primary-dark;
+      transform: scale(0.98);
+
+    }
+
+    p {
       margin-top: 1rem;
 
       font-size: 1.6rem;
       color: $color-white;
+
+
+      span {
+        transition: all 0.3s;
+
+        &:hover {
+          color: $color-primary-dark;
+          transform: scale(0.8);
+          box-shadow: 0 2rem 4rem rgba($color-black, 0.5);
+          padding: 1rem;
+          border-radius: 1rem;
+          cursor: pointer;
+
+        }
+      }
     }
 
   }
+
+
 
 }
