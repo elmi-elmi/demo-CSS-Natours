@@ -28,16 +28,74 @@
     width: 6rem;
     background-color: $color-white;
     border-radius: 50%;
+    box-shadow: 0 0 2rem rgba($color-black,0.2);
+    transition: all 0.3s;
 
     position: fixed;
     top: 6rem;
     right: 3rem;
     z-index: 100;
+
+    &:hover{
+      transform: translateY(0.1rem);
+      box-shadow: 0 0 2rem rgba($color-black,0.1);
+
+    }
+
   }
 
+  &__icon{
+    position:relative;
+
+    &,
+    &::before,
+    &::after{
+      display: inline-block;
+      content: '';
+      height: 2px;
+      width: 3rem;
+      background-color: $color-gray-dark-3;
+      transform: translate(1.5rem, 1.8rem);
+
+    }
+
+    &::before,
+    &::after{
+      position:absolute;
+
+    }
+    &::before{
+      transition: all 0.3s;
+      transform: translateY(-0.7rem);
+    }
+    &::after{
+      transition: all 0.3s;
+      transform: translateY(+0.7rem);
+    }
+
+
+  }
+
+  &__button:hover &__icon::before{
+    transform: translateY(-1rem);
+  }
+  &__button:hover &__icon::after{
+    transform: translateY(+1rem);
+  }
+  &__checkbox:checked ~ &__button &__icon{
+    background-color: transparent;
+  }
+  &__checkbox:checked ~ &__button &__icon:before{
+    transform: rotate(45deg);
+  }
+  &__checkbox:checked ~ &__button &__icon:after{
+    transform: rotate(-45deg);
+
+  }
   &__checkbox:checked ~ &__bg {
     transform:scale(80);
   }
+
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     visibility: visible;
@@ -62,9 +120,6 @@
     list-style: none;
   }
   &__item{
-
-
-
 
 
   }
