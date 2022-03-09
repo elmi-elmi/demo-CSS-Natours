@@ -8,6 +8,21 @@
   width: 100%;
   background-color: rgba($color-black, 0.8);
 
+  opacity: 0;
+  visibility: hidden;
+
+  &:target{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content{
+    transform:translate(-50%, -50%) scale(1);
+
+    //transform: scale(1);
+
+  }
+
 
   &__content {
     @include absCenter;
@@ -18,6 +33,8 @@
     border-radius: 3px;
     display: table;
     overflow: hidden;
+    transform:translate(-50%, -50%) scale(0.2);
+    transition: all 0.4s;
 
   }
 
@@ -46,5 +63,23 @@
     column-rule: 1px solid $color-gray-light-2;
 
     hyphens: auto;
+  }
+
+  &__close{
+    &:link,
+    &:visited{
+      color: $color-gray-dark;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      text-decoration: none;
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+
+    &:hover{
+      color: $color-primary;
+    }
   }
 }
