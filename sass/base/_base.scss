@@ -8,9 +8,33 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 10 / 16
+
+  @include respond(tab-land){
+    font-size: 56.25%; // 9 / 16
+  }
+
+  @include respond(phone){
+    font-size: 50%; // 8 / 16
+  }
+
+  //@include respond(tab-port){
+  //  font-size: 50%; // 8 / 16
+  //}
+
+
+  @include respond(big-desktop){
+    font-size: 80%; // 12 / 16
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-land){
+    padding: 0;
+  }
+
+
 }

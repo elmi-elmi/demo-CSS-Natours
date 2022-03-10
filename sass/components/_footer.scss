@@ -18,21 +18,32 @@
   }
 
   &__navigation {
+    display: inline-block;
+    border-top: 2px solid $color-gray-dark;
+
+    @include respond(tab-port){
+      width: 100%;
+    }
+
 
   }
 
   &__list {
-    display: inline-block;
     list-style: none;
-    border-top: 2px solid $color-gray-dark;
     transition: all .3s;
     backface-visibility: hidden;
+
+
 
     &:hover{
       border-top: 2px solid $color-primary-dark;
       transform: scale(0.98);
-
     }
+
+    @include respond(tab-port){
+      text-align: center;
+    }
+
 
   }
 
@@ -40,7 +51,7 @@
 
 
     margin-top: 1rem;
-    float: left;
+    display: inline-block;
 
     &:not(:last-child) {
       margin-right: 2rem;

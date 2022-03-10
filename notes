@@ -357,7 +357,50 @@ video tag
 
 
 
+23:24:
 
 
+parent"
+    display:table;
+child:
+    display:table-cell;
+    vertical-align:center;
+
+
+    text pargraph column hyphens
+
+    column-count:2;
+    column-gap:4rem;
+    column-rule:1px solid $
+
+    hyphens:auto //manual
+
+
+--------------------------------------------------------------
+6. Natours Project — Advanced Responsive Design (Part 3)
+--------------------------------------------------------------
+
+3: mixin content include if
+
+    @mixin respond-phone{
+        @media (max-width: 600px){@content} // **
+    }
+
+    @include respond-phone{
+        font-size:50%; // this copied in @content **
+    }
+
+
+
+    @mixin respond($breakpoint){
+    @if($breakpoint == phone){
+        @media (max-width: 600px){@content}
+        }
+    @if($breakpoint == tab-port{
+        @media (max-width: 600px){@content}
+        }
+    }
+
+5:
 
 
