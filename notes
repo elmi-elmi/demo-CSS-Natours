@@ -1,5 +1,5 @@
 --------------------------------------------------------------
-2. Natours Project — Setup and First Steps (Part 1)
+2. Natours Project — Setup and First Steps (Part 1) ✔️
 --------------------------------------------------------------
 3 -
     clip-path: polygan(x y, x y , ...);
@@ -41,7 +41,7 @@
 
 
 --------------------------------------------------------------
-3. How CSS Works A Look Behind the Scenes
+3. How CSS Works A Look Behind the Scenes ✔️
 --------------------------------------------------------------
 
 
@@ -93,7 +93,7 @@
 
 
 --------------------------------------------------------------
-4. Introduction to Sass and NPM
+4. Introduction to Sass and NPM ✔️
 --------------------------------------------------------------
  you can use // for comment in sass
  sass and scss are same but scss use {} and sass use indent;
@@ -215,7 +215,7 @@
 
 
 --------------------------------------------------------------
-5. Natours Project — Using Advanced CSS and Sass (Part 2)
+5. Natours Project — Using Advanced CSS and Sass (Part 2) ✔️
 --------------------------------------------------------------
 
 
@@ -377,7 +377,7 @@ child:
 
 
 --------------------------------------------------------------
-6. Natours Project — Advanced Responsive Design (Part 3)
+6. Natours Project — Advanced Responsive Design (Part 3) ✔️
 --------------------------------------------------------------
 
 3: mixin content include if
@@ -403,5 +403,34 @@ child:
 
 5:
 6:
+7:
+ Responsive Image:
+    1 - Resolution Switching --> large screen, small screen
+    2 - Density Switching  2x --> high resolution , 1x --> low resolution
+    3 - Art Direction --> large screen, small screen
+
+8:
+    Density Switching
+
+    <img src=   ===>    <img srcset="img/bg1.jpg 2x, img/bg2 1x"  src="img/bg1.jpg"/>
+
+    use picture source media
+
+    <picture>
+        <source srcset="img/bg1-small-2x.png 2x, img/bg2-small-1x.png 1x" media="(max-width:37.5rem)" >
+        <img srcset="img/bg1.jpg 2x, img/bg2 1x"  src="img/bg1.jpg"/>
+
+
+
+    </picture>
+9:
+    Resolution Switching:
+
+
+                                   300 width is of img,     1000 is width of img
+        <img srcset ="img/nat1.png 300w, img/nat1-large.png 1000w"
+             sizes="(max-width:900px) 20vw //for small img, (max-width:600px) 30vw //for large img, 300 //for defautl img"
+
+
 
 
