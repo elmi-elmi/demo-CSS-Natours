@@ -13,23 +13,22 @@
 
     transition: all 0.8s ease;
     backface-visibility: hidden;
-    border-radius:1rem;
+    border-radius: 1rem;
 
-    overflow:hidden;
+    overflow: hidden;
 
 
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
 
     &--front {
-      position:absolute;
+      position: absolute;
       background-color: white;
-
 
 
     }
 
     &--back {
-      position:absolute;
+      position: absolute;
 
       transform: rotateY(-180deg);
 
@@ -57,74 +56,79 @@
     transform: rotateY(0);
   }
 
-  &__picture{
+  &__picture {
     height: 23rem;
-    background-size:cover;
+    background-size: cover;
     background-blend-mode: screen;
-    clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
-    &--1{
-      background-image: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark),url("../img/nat-5.jpg");
+    &--1 {
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url("../img/nat-5.jpg");
     }
-    &--2{
-      background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark),url("../img/nat-6.jpg");
+
+    &--2 {
+      background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url("../img/nat-6.jpg");
     }
-    &--3{
-      background-image: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark),url("../img/nat-7.jpg");
+
+    &--3 {
+      background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url("../img/nat-7.jpg");
     }
 
   }
 
-  &__heading{
+  &__heading {
     font-size: 2.8rem;
     font-weight: 300;
     text-transform: uppercase;
     text-align: right;
     color: $color-white;
     position: absolute;
-    top:12rem;
-    right:2rem;
+    top: 12rem;
+    right: 2rem;
     width: 70%;
 
 
-
-
   }
-  &__heading--span{
-    padding:1rem 1.5rem;
+
+  &__heading--span {
+    padding: 1rem 1.5rem;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
-    &--1{
-      background-image: linear-gradient(to right bottom,rgba($color-secondary-light,0.85),rgba($color-secondary-dark,0.85));
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.85), rgba($color-secondary-dark, 0.85));
 
 
     }
-    &--2{
-      background-image: linear-gradient(to right bottom,rgba($color-primary-light,0.85),rgba($color-primary-dark,0.85));
+
+    &--2 {
+      background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.85), rgba($color-primary-dark, 0.85));
 
 
     }
-    &--3{
-      background-image: linear-gradient(to right bottom,rgba($color-tertiary-light,0.85),rgba($color-tertiary-dark,0.85));
+
+    &--3 {
+      background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.85), rgba($color-tertiary-dark, 0.85));
     }
 
   }
 
 
-  &__details{
+  &__details {
     padding: 3rem;
-    ul{
-      list-style:none;
-      width: 80%;
-      margin:0 auto;
 
-      li{
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
         font-size: 1.5rem;
         text-align: center;
-        padding:1rem;
+        padding: 1rem;
 
-        &:not(:last-child){
-          border-bottom: 1px solid $color-gray-light-2 ;
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-gray-light-2;
 
         }
       }
@@ -133,28 +137,84 @@
   }
 
 
-  &--cta{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
+  &--cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 80%;
     text-align: center;
 
   }
-  &--price-box{
+
+  &--price-box {
     margin-bottom: 10rem;
   }
-  &--price-only{
+
+  &--price-only {
     font-size: 1.6rem;
     color: $color-white;
   }
-  &--price-value{
+
+  &--price-value {
     font-size: 6rem;
     font-weight: 300;
     color: $color-white;
 
   }
+// --------------
+  @include respond(tab-port) {
+    height: auto;
+    font-size: 3rem;
+    border-radius: 3px;
+
+    background-color: $color-white;
+
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        position: relative;
+        transform: rotateY(0deg);
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+
+      }
+
+    }
+
+
+    &--cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      text-align: center;
+
+      padding: 7rem 4rem 4rem 4rem;
+
+
+    }
+
+    &--price-box {
+      margin-bottom: 4rem;
+    }
+
+    &--price-only {
+      font-size: 1.6rem;
+      color: $color-white;
+    }
+
+    &--price-value {
+      font-size: 4rem;
+
+    }
+  }
+
 
 }
 
