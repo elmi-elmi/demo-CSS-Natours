@@ -8,10 +8,18 @@
     top: 7rem;
     right: 4rem;
     z-index: 80;
-    opacity: 0;
 
 
     transition: all 0.5s ease;
+
+    @include respond(tab-port){
+      top: 5rem;
+      right: 3.5rem;
+    }
+    @include respond(phone){
+      top: 4rem;
+      right: 3rem;
+    }
 
 
   }
@@ -101,7 +109,6 @@
 
   }
   &__checkbox:checked ~ &__bg {
-    opacity: 1;
     transform:scale(100);
   }
 

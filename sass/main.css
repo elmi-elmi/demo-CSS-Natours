@@ -928,8 +928,19 @@ body {
   top: 7rem;
   right: 4rem;
   z-index: 80;
-  opacity: 0;
   transition: all 0.5s ease;
+}
+@media (max-width: 900px) {
+  .navigation__bg {
+    top: 5rem;
+    right: 3.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .navigation__bg {
+    top: 4rem;
+    right: 3rem;
+  }
 }
 .navigation__checkbox {
   display: none;
@@ -1001,7 +1012,6 @@ body {
   transform: rotate(-45deg);
 }
 .navigation__checkbox:checked ~ .navigation__bg {
-  opacity: 1;
   transform: scale(100);
 }
 .navigation__checkbox:checked ~ .navigation__nav {
