@@ -431,6 +431,19 @@ child:
         <img srcset ="img/nat1.png 300w, img/nat1-large.png 1000w"
              sizes="(max-width:900px) 20vw //for small img, (max-width:600px) 30vw //for large img, 300 //for defautl img"
 
+10: resposive image -- and - or  -- min-resolution
+    media query always in `em`
+
+    for and use --> and
+    for or use --> , (comma)
+
+
+    @media(min-resolution:192dpi) and (min-width:600px), // remember you can use em  600px: 37.5em, 2000px: 125 em  (600/16, 2000/16)
+        (min-width:2000px){
+
+        ....
+        }
+
 
 
 
