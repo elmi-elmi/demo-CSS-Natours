@@ -444,6 +444,109 @@ child:
         ....
         }
 
+11: support caniuse
+
+-webkit-min-device-pixel-ratio  // safari does not support min-resolution
+
+    @support ( everything ) or (other){
+        everything;
+        other;
+    }
+
+12: compile concat prefix - autoprefixer -- postcss-cli -- compress -- npm run all -- devserver -- parallel -b (browser) last 10 version
+
+
+all the css code in one file. It is better because one http request needed
+
+postcss pars prefixer
+
+    // todo
+
+
+    1 - compilation
+    2 - concatination
+    3 - prefixing
+    4 - compressing
+
+
+    1 -
+        "compile:sass":"sass main.scss style.comp.css"
+
+    2 - concat with other css like icon-font
+
+        npm install concat --save-dev
+
+        "concat:css":"concat -o sytle.concat.css icon-font.css style.comp.css"
+
+    3 - autoprifixer - and set how many version of browser supported -- -b mean browser
+
+        and for parse need to install postcss-cli  (cli => command line interface)
+
+        npm install autoprefixer --save-dev
+        npm install postcss-cli postcss --save-dev
+
+        "prefix:css":"postcss --use autoprefixer -b 'last 10 version' style.concat.css -o style.prefix.css "
+
+    4 - compressing: sass do this:
+
+        "compress:css": "sass style.prefix.css style.css --style compressed" (or style.min.css)  // --output-style --> --style
+
+
+
+
+    and if you want to run alltogether:
+
+    npm install npm-run-all --save-dev
+
+    "build:css":"npm-run-all compile:sass concat:css prefix:css compress:css"
+
+
+
+     "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.css -w",
+    "compile:sass": "sass sass/main.scss css/style.comp.css",
+
+    "concat:css": "concat -o css/style.concat.css css/icon-fonts.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "sass css/style.prefix.css css/style.css --style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css "
+  },
+
+
+13: selection --  meta tag viewport -- hover:none
+
+
+    how to change background of selected text:
+
+    ::selection{
+        background-color:
+        color:
+        }
+
+    use `only screen` in media query if some want to print out the page the media query don't apply;
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == phone) {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+  }
+
+  responsive design does not work without meta tag viewport
+
+  for example: if device 400px then website also 400px (width)
+  if you don't use that website zoom out in largest version;
+
+hover none: (for touch device): use hover:none
+    @media only screen and (max-width: 900px),
+  only screen and (hover:none){
+
+
+  oposite hover:none ==> hover:hover
+
+
+
 
 
 

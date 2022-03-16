@@ -163,7 +163,9 @@
 
   }
 // --------------
-  @include respond(tab-port) {
+//  @include respond(tab-port) {
+  @media only screen and (max-width: 900px),
+  only screen and (hover:none){
     height: auto;
     font-size: 3rem;
     border-radius: 3px;
