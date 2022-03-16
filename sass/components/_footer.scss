@@ -20,7 +20,10 @@
   &__navigation {
     display: inline-block;
     border-top: 2px solid $color-gray-dark;
-
+    &:hover{
+      border-top: 2px solid $color-primary-dark;
+      transform: scale(0.98);
+    }
     @include respond(tab-port){
       width: 100%;
     }
@@ -35,10 +38,7 @@
 
 
 
-    &:hover{
-      border-top: 2px solid $color-primary-dark;
-      transform: scale(0.98);
-    }
+
 
     @include respond(tab-port){
       text-align: center;

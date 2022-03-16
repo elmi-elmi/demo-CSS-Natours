@@ -869,6 +869,10 @@ body {
   display: inline-block;
   border-top: 2px solid #777;
 }
+.footer__navigation:hover {
+  border-top: 2px solid #28b485;
+  transform: scale(0.98);
+}
 @media only screen and (max-width: 900px) {
   .footer__navigation {
     width: 100%;
@@ -878,10 +882,6 @@ body {
   list-style: none;
   transition: all 0.3s;
   backface-visibility: hidden;
-}
-.footer__list:hover {
-  border-top: 2px solid #28b485;
-  transform: scale(0.98);
 }
 @media only screen and (max-width: 900px) {
   .footer__list {
